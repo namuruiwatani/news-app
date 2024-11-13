@@ -1,70 +1,170 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📰 News Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![news](https://i.postimg.cc/9M1ZDSn4/news.png)
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🌟 Roles
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. **Readers** – Regular users who read and interact with the content.
+2. **Content Makers** – Users who create and manage their own news posts.
+3. **Admins** – Users with full access to site management, including content moderation and user administration.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🔐 Authorization & Registration
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Authorization** can be done via Google or by standard email/password authentication.
+- **Registration** requires providing a name, email, password, and password confirmation.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+After logging in, users are redirected to a specific page based on their role, ensuring streamlined access to relevant features.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 📋 User Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. **Profile Management**: Users can view and edit their profile information.
+![profile](https://i.postimg.cc/tCrVNmW3/profile.png)
+2. **News Viewing**:
+   - **News Filtering** by category.
+   - **Search** by title or categories.
+[![search.png](https://i.postimg.cc/3wBR3t7S/search.png)](https://postimg.cc/JysmqcsZ)
+   - **Pagination** for better navigation.
+   - **Full Article View**.
+[![readmorenews.png](https://i.postimg.cc/Bb9RygFN/readmorenews.png)](https://postimg.cc/tZkrnF2V)
+3. **Commenting**:
+   - Users can comment on news articles.
+   - Comments by admins or content makers have a special label.
+[![tecommme.png](https://i.postimg.cc/ryJF20hg/tecommme.png)](https://postimg.cc/fkVhxLQ0)
+[![rere.png](https://i.postimg.cc/DwWpkzkm/rere.png)](https://postimg.cc/w1pQDgBd)
+4. **Comment Moderation**:
+   - Profanity in comments is automatically censored.
+[![mat.png](https://i.postimg.cc/K8FWSfYs/mat.png)](https://postimg.cc/qzbw28y8)
+5. **Likes & Dislikes** on news articles and comments.
+6. **Favorite News**: Users can add or remove news from their favorites list.
+7. **Localization**: Supports switching languages: 🇰🇿 Kazakh, 🇷🇺 Russian, 🇺🇸 English.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## 🔧 Admin Features
 
-## Contributing
+1. **Profile Management**.
+2. **News Management (CRUD)**:
+   - Add news with a title, content, image, tags, and category.
+   - News is marked with the author’s role (Admin/Content Maker).
+   - Edit and delete news as needed.
+3. **Comment Moderation**:
+   - Approve or reject comments containing profanity.
+4. **Category Management**: Add and remove categories.
+5. **Tag Management**: Add and remove tags.
+6. **User Management**:
+   - View users and assign roles or delete accounts.
+   - Soft-delete functionality allows for account recovery.
+[![adminusers.png](https://i.postimg.cc/Ls1z8Kh9/adminusers.png)](https://postimg.cc/bGqGm5QW)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## ✏️ Content Maker Features
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. **Profile Management**.
+2. **News Management (CRUD)**: Create, edit, and delete their own news posts.
+3. **Commenting**: Can write and view comments on news.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🚀 Installation and Setup
 
-## License
+### Requirements
+- **PHP** >= 7.4
+- **Composer**
+- **Laravel** >= 8.x
+- **MySQL**
+- Local web server (e.g., XAMPP)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# news-app
->>>>>>> c546dd13c688d71beb283040e4c7be96782f83bc
+### Installation Steps
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/namuruiwatani/news-app.git
+   cd https://github.com/namuruiwatani/news-app.git
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   composer install
+   ```
+
+3. Set up the environment file:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   Fill in the `.env` file with the following database and Google OAuth configurations:
+
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=your_database_name
+   DB_USERNAME=your_username
+   DB_PASSWORD=your_password
+
+   GOOGLE_CLIENT_ID=your_google_client_id
+   GOOGLE_CLIENT_SECRET=your_google_client_secret
+   GOOGLE_REDIRECT_URI=http://localhost:8000/auth/google/callback
+   ```
+
+   [Google OAuth Setup Guide](https://support.google.com/cloud/answer/6158849?hl=en)
+
+4. Generate the application key:
+
+   ```bash
+   php artisan key:generate
+   ```
+
+5. Run migrations and seed the database:
+
+   ```bash
+   php artisan migrate --seed
+   ```
+
+6. Start the local server:
+
+   ```bash
+   php artisan serve
+   ```
+
+---
+
+## 🛠 Usage
+
+To run the local server, use:
+
+```bash
+php artisan serve
+```
+
+For scheduling tasks, configure `php artisan schedule:run` (optional).
+
+### Additional Commands
+
+- Clear configuration cache:
+
+   ```bash
+   php artisan config:cache
+   ```
+
+- Reset and reseed migrations:
+
+   ```bash
+   php artisan migrate:fresh --seed
+   ```
+
+---
+
+## 💬 Support
+
+If you encounter any issues, please contact the developers at [dev.namuru@gmail.com](mailto:dev.namuru@gmail.com).
+
