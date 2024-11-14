@@ -86,7 +86,7 @@ After logging in, users are redirected to a specific page based on their role, e
 
    ```bash
    git clone https://github.com/namuruiwatani/news-app.git
-   cd https://github.com/namuruiwatani/news-app.git
+   cd news-app
    ```
 
 2. Install dependencies:
